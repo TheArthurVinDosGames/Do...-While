@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CalculadoraIdade {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int r;
+
+        do {
+            System.out.print("Digite o ano atual: ");
+            int aA = in.nextInt();
+
+            System.out.print("Digite o ano de nascimento: ");
+            int aN = in.nextInt();
+
+            int i = aA - aN;
+
+            System.out.println("Sua idade é: " + idade);
+            if (i < 18) {
+                System.out.println("Você é menor de idade.");
+            } else {
+                System.out.println("Você é maior de idade.");
+            }
+
+            System.out.println("Digite 1 para calcular outra idade ou 2 para sair.");
+            r = in.nextInt();
+
+        } while (r != 2);
+
+        in.close();
+    }
+}
